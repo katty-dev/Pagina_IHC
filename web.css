@@ -1,0 +1,241 @@
+/* General reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  color: #fff;
+  background: #f5f5f5;
+  padding-top: 100px; /* Ajusta según la altura de tu navbar */
+
+}
+.navbar .logo h2 {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin: 0;            /* elimina márgenes por defecto */
+}
+h2,h1, a, p{
+    font-family: 'Times New Roman', Times, serif;
+}
+.navbar .logo p {
+  font-size: 1rem;
+  margin-left: 70px;    /* separa un poco del h1 */
+  margin-top: 5px;      /* da espacio hacia abajo del h1 */
+}
+/* Navbar */
+/* Navbar fijo */
+.navbar {
+  position: fixed; /* Fija el navbar en la parte superior */
+  top: 0;          /* Alineado al top de la página */
+  left: 0;
+  width: 100%;     /* Ocupa todo el ancho */
+  background-color: rgba(255, 255, 255, 0.8); /* Color de fondo semi-transparente */
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 50px;
+  z-index: 1000;   /* Para que quede encima de todo */
+}
+
+.navbar .logo {
+  display: flex;
+  align-items: center;
+
+}
+.navbar .logo img {
+  margin-right: 5px;    
+  height: 50px;
+  width: 100px; 
+
+
+}
+.navbar nav ul {
+  list-style: none;
+  display: flex;
+}
+.navbar nav ul li {
+  margin-left: 20px;
+}
+.navbar nav ul li a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+.navbar nav ul li a.active {
+  border-bottom: 2px solid #3f51b5;
+}
+.navbar h2, p{
+  color: #000;
+
+}
+
+/* Hero */
+.hero {
+  position: relative;
+  background: url("https://cdn.udax.edu.mx/blog/2025-03-06/el-futuro-de-la-interaccion-humano-maquina-enfoques-innovadores-y-tendencias-emergentes_1.jpg") no-repeat center center/cover;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero .overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+}
+.hero-content {
+  position: relative;
+  text-align: center;
+  max-width: 800px;
+  padding: 20px;
+}
+
+.hero-content h1 {
+  font-size: 4rem;
+  font-weight: bold;
+}
+.hero-content h2 {
+  font-size: 2rem;
+  margin: 15px 0;
+}
+.hero-content h2 span {
+  color: #fbc02d;
+}
+.hero-content p {
+  margin: 20px 0;
+  font-size: 1rem;
+  color: #fff;
+}
+.buttons {
+  margin-top: 20px;
+}
+.btn {
+  padding: 10px 20px;
+  border-radius: 3px;
+  text-decoration: none;
+  margin: 0 10px;
+}
+.btn.primary {
+  background: #3f51b5;
+  color: #fff;
+}
+.btn.secondary {
+  background: #fff;
+  color: #000;
+}
+
+/*Container Concepto*/
+/* Contenedor general */
+.container {
+  max-width: 900px;                 /* ancho máximo controlado */
+  margin: 100px auto;               /* lo centra con margen superior */
+  padding: 40px 30px;               /* espacio interno amplio */
+  background: rgba(255, 255, 255, 0.85); /* fondo blanco semitransparente */
+  border-radius: 15px;              /* bordes redondeados */
+  box-shadow: 0 8px 25px rgba(0,0,0,0.25); /* sombra elegante */
+  text-align: center;               /* centra el contenido */
+  backdrop-filter: blur(6px);       /* efecto vidrio esmerilado */
+}
+
+/* Estilos de títulos */
+.container h2 {
+  font-size: 2.2rem;
+  color: #002855;                   /* azul fuerte para contraste */
+  margin-bottom: 20px;
+  font-weight: bold;
+  line-height: 1.3;
+}
+
+/* Estilos de párrafos */
+.container p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #333;                      /* gris oscuro para legibilidad */
+  margin-bottom: 15px;
+}
+
+
+/* Sección de Percepción */
+.percepcion {
+  text-align: center;
+  color: #0d1a33;
+  padding: 30px 15px; 
+  background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%); /* Fondo degradado suave */
+  border-radius: 20px;
+  box-shadow: 0px 10px 40px rgba(0,0,0,0.1);
+}
+
+/* Título */
+.percepcion h2 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  color: #002855;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+/* Texto descriptivo */
+.percepcion p {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  color: #444;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.8;
+}
+
+/* Contenedor de tarjetas */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  justify-content: center;
+}
+
+/* Estilos de las tarjetas */
+.card {
+  background: #fff;
+  padding: 10px 20px;
+  border-radius: 15px;
+  box-shadow: 0px 8px 20px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Efecto hover */
+.card:hover {
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: 0px 12px 30px rgba(0,0,0,0.25);
+}
+
+/* Decoración con gradiente en la parte superior */
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 8px;
+  background: linear-gradient(90deg, #ff9800, #3f51b5);
+  border-radius: 15px 15px 0 0;
+}
+
+/* Títulos de las tarjetas */
+.card h3 {
+  margin-bottom: 15px;
+  color: #3f51b5;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+/* Texto de las tarjetas */
+.card p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
